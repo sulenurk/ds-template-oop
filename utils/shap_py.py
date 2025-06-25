@@ -13,7 +13,7 @@ import pandas as pd
 import numpy as np
 import os
 
-def shap_values(model_info, df):
+def shap_values(model, df):
   """
     Compute SHAP values for all observations in *df*.
 
@@ -37,7 +37,7 @@ def shap_values(model_info, df):
       computation.
     """
 
-  model = model_info['model']
+  #model = model_info['model']
 
   # Choose appropriate SHAP explainer
   explainer = shap.Explainer(model, feature_names=df.columns)
